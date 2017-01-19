@@ -14,4 +14,12 @@ class Currency
   def !=(other)
     @amount != other.amount || @code != other.code
   end
+
+  def +(other)
+    if @code == other.code
+      @amount += other.amount
+    else
+      puts 'These currencies do not match'
+    end
+  end
 end
