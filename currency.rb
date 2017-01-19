@@ -22,4 +22,12 @@ class Currency
       puts 'These currencies do not match'
     end
   end
+
+  def -(other)
+    if @code == other.code
+      @amount += other.amount
+    else
+      puts 'These currencies do not match'
+    end
+  end
 end
